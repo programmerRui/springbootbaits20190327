@@ -18,7 +18,7 @@
 <body>
 <div id="body">
     <div style="margin: 0px auto; width: 500px;">
-        <form action="updateBookInfo.do" id="imm" method="post">
+        <form action="update.do" id="imm" method="post">
             <table border="1px" style="text-align: center;">
                 <tr>
                     <td>图书编号</td>
@@ -67,7 +67,7 @@
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit" value="提交">
-                    <a href="querybook.do"><input type="button" value="取消"></a>
+                    <a href="/selectAll.do"><input type="button" value="取消"></a>
                     </td>
                 </tr>
             </table>

@@ -22,4 +22,6 @@ public interface BookInfoMapper {
     int updateByPrimaryKey(BookInfo record);
 
     List<BookInfo> selectAllBook(@Param("bookid") Integer bookid,@Param("bookname") String bookname,@Param("borrow") Integer borrow);
+
+    int deleteByIds(String[] bookid);
 }

@@ -54,4 +54,9 @@ public class bookInfoServiceImpl implements bookInfoService {
     public List<BookInfo> selectAllBook(Integer bookid, String bookname, Integer borrow) {
         return bookInfoDao.selectAllBook(bookid,bookname,borrow);
     }
+
+    @Override
+    public int deleteByIds(String[] bookid) {
+        return bookInfoDao.deleteByIds(bookid);
+    }
 }

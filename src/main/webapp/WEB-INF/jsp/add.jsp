@@ -17,7 +17,7 @@
 <body>
 <div id="body">
     <div style="margin: 0px auto; width: 500px;">
-        <form action="/add.do" id="imm" method="post">
+        <form action="/add.do" id="imm" method="post" enctype="multipart/form-data" >
             <table border="1px" style="text-align: center;">
                 <tr>
                     <td>图书编号</td>
@@ -33,7 +33,6 @@
                     <td style="text-align: left;"><select name="bookType">
                         <c:forEach items="${bookTypes}" var="bookType">
                             <option value="${bookType.typeId }">${bookType.typeName}</option>
-
                         </c:forEach>
                     </select></td>
                 </tr>
@@ -59,7 +58,7 @@
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit" value="提交">
-                        <a href="querybook.do"><input type="button" value="取消"></a></td>
+                        <a href="selectAll.do"><input type="button" value="取消"></a></td>
                 </tr>
             </table>
         </form>

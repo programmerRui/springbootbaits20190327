@@ -88,6 +88,12 @@
     delete from book_info
     where book_id = #{bookId,jdbcType=INTEGER}
   </delete>
+  <delete id="deleteByIds" >
+    delete from book_info where book_id in
+    <foreach collection="array" open="(" separator="," close=")" item="ids">
+      #{ids}
+    </foreach>
+  </delete>
   <insert id="insert" parameterType="com.nuesoft.po.BookInfo" >
     insert into book_info (book_id, book_code, book_name, 
       book_type, book_author, publish_press, 

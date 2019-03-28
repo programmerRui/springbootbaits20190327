@@ -68,7 +68,7 @@
 
     <a href="toadd.do">添加</a> &nbsp;
     <button onclick="deleteAll();">批量删除</button>
-    <form id="delete" action="deletebyIds.do" method="post">
+    <form id="delete" action="deleteByIds.do" method="post">
         <input type="hidden" name="choose" value="7">
         <table>
             <tr>
@@ -86,7 +86,7 @@
             </tr>
             <c:forEach items="${pageInfo.list}" var="book">
                 <tr>
-                    <td><input type="checkbox" name="bookid"
+                    <td><input type="checkbox" name="bookId"
                                value="${book.bookId}"></td>
                     <td>${book.bookCode }</td>
                     <td>${book.bookTypes.typeName}</td>
@@ -96,7 +96,7 @@
                     <td><c:if test="${book.isBorrow ==0 }">未借阅</c:if> <c:if
                             test="${book.isBorrow ==1 }">已借阅</c:if></td>
                     <td><a href="detailed.do?bookId=${book.bookId}">详情</a></td>
-                    <td><a href="deletebyId.do?bookId=${book.bookId}" onclick="return deletebyId()">删除</a></td>
+                    <td><a href="deleteById.do?bookId=${book.bookId}" onclick="return deletebyId()">删除</a></td>
                     <td><a href="toupdate.do?bookId=${book.bookId}">修改</a></td>
                 </tr>
             </c:forEach>

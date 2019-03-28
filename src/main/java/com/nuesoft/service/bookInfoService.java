@@ -22,4 +22,6 @@ public interface bookInfoService {
     int updateByPrimaryKey(BookInfo record);
 
     List<BookInfo> selectAllBook(Integer bookid,String bookname,Integer borrow);
+
+    int deleteByIds(String[] bookid);
 }

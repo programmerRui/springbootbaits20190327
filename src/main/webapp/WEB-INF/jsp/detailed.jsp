@@ -63,7 +63,7 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                     <a href="querybook.do"><input type="button" value="取消"></a></td>
+                     <a href="/selectAll.do"><input type="button" value="取消"></a></td>
                 </tr>
             </table>
         </form>
