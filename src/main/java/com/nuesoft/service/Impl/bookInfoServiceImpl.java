@@ -15,6 +15,7 @@ import java.util.List;
 public class bookInfoServiceImpl implements bookInfoService {
     @Autowired
     private BookInfoMapper bookInfoDao;
+
     @Override
     public int deleteByPrimaryKey(Integer bookId) {
         return bookInfoDao.deleteByPrimaryKey(bookId);
@@ -52,7 +53,7 @@ public class bookInfoServiceImpl implements bookInfoService {
 
     @Override
     public List<BookInfo> selectAllBook(Integer bookid, String bookname, Integer borrow) {
-        return bookInfoDao.selectAllBook(bookid,bookname,borrow);
+        return bookInfoDao.selectAllBook(bookid, bookname, borrow);
     }
 
     @Override

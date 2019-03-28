@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false"
-         pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -14,11 +14,12 @@
             //提交查询的表单
             $("#query").submit();
         }
+
         function changecheckBox(check) {
             var input = $("input[name='bookid']");
             if (check) {
                 $(input).each(function (i) {
-                    this.setAttribute("checked","checked");
+                    this.setAttribute("checked", "checked");
 //this.setAttribute("checked","true");
                 })
             } else {
@@ -27,15 +28,17 @@
                 })
             }
         }
+
         function deletebyId() {
-            if(confirm("你确定要删除这条信息？")==true){
+            if (confirm("你确定要删除这条信息？") == true) {
                 return true;
-            }else{
+            } else {
                 return false;
             }
         }
+
         function deleteAll() {
-            if(confirm("你确定要删除这条信息?")==true){
+            if (confirm("你确定要删除这条信息?") == true) {
                 $("#delete").submit();
             }
         }
@@ -57,13 +60,14 @@
         &nbsp;是否借阅 <select name="isborrow">
         <option value="-1">请选择</option>
         <option value="0"
-                <c:if test="${borrow==0}">selected="selected" </c:if>>未借阅</option>
+                <c:if test="${borrow==0}">selected="selected" </c:if>>未借阅
+        </option>
         <option value="1"
-                <c:if test="${borrow==1}">selected="selected" </c:if>>已借阅</option>
+                <c:if test="${borrow==1}">selected="selected" </c:if>>已借阅
+        </option>
     </select> <input type="hidden" name="now" id="pageno"> <input
             type="submit" value="查询">
     </form>
-
 
 
     <a href="toadd.do">添加</a> &nbsp;
@@ -105,7 +109,8 @@
                     <a href="javascript:doPage(${pageInfo.pageNum-1});">上一页</a>&nbsp;&nbsp;
                     <a href="javascript:doPage(${pageInfo.pageNum+1});">下一页</a>&nbsp;&nbsp;
                     <a href="javascript:doPage(${pageInfo.pages});">末页</a>&nbsp;&nbsp;
-                    ${pageInfo.pageNum}/${pageInfo.pages}页</td>
+                    ${pageInfo.pageNum}/${pageInfo.pages}页
+                </td>
             </tr>
         </table>
     </form>

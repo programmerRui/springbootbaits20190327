@@ -15,6 +15,7 @@ import java.util.List;
 public class bookTypeSerivceImpl implements bookTypeService {
     @Autowired
     private BookTypeMapper bookTypeMapper;
+
     @Override
     public int deleteByPrimaryKey(Integer typeId) {
         return bookTypeMapper.deleteByPrimaryKey(typeId);

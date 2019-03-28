@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false"
-         pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -34,13 +34,14 @@
                     <td>图书分类</td>
                     <td style="text-align: left;"><select name="bookType">
                         <c:forEach items="${bookTypes}" var="bookType">
-                            <option value="${bookType.typeId}" <c:if test="${bookType.typeId==bookInfo.bookType}">selected</c:if>>${bookType.typeName}</option>
+                            <option value="${bookType.typeId}"
+                                    <c:if test="${bookType.typeId==bookInfo.bookType}">selected</c:if>>${bookType.typeName}</option>
                         </c:forEach>
                     </select></td>
                 </tr>
                 <tr>
                     <td>作者</td>
-                    <td><input name="bookAuthor"  value="${bookInfo.bookAuthor}"></td>
+                    <td><input name="bookAuthor" value="${bookInfo.bookAuthor}"></td>
                 </tr>
                 <tr>
                     <td>出版社</td>
@@ -51,11 +52,13 @@
                     <td><select name="isBorrow">
                         <option value="1" <c:if test="${bookInfo.isBorrow==1}">selected</c:if>>已借阅</option>
                         <option value="0" <c:if test="${bookInfo.isBorrow==0}">selected</c:if>>未借阅</option>
-                    </select></td></td>
+                    </select></td>
+                    </td>
                 </tr>
                 <tr>
                     <td>出版时间</td>
-                    <td><input type="text" name="publishDate" value="<fmt:formatDate value="${bookInfo.publishDate}" pattern="yyyy-MM-dd"/> "></td>
+                    <td><input type="text" name="publishDate"
+                               value="<fmt:formatDate value="${bookInfo.publishDate}" pattern="yyyy-MM-dd"/> "></td>
                 </tr>
                 <tr>
                     <td>图片上传</td>
@@ -67,7 +70,7 @@
                 </tr>
                 <tr>
                     <td colspan="2"><input type="submit" value="提交">
-                    <a href="/selectAll.do"><input type="button" value="取消"></a>
+                        <a href="/selectAll.do"><input type="button" value="取消"></a>
                     </td>
                 </tr>
             </table>
@@ -81,15 +84,15 @@
 <script type="text/javascript" src="../../resource/js/jquery_2.1.4_baidu_min.js"></script>
 <script type="text/javascript" src="../../resource/js/jquery-form.js"></script>
 <script type="text/javascript">
-    function uploadImage(){
+    function uploadImage() {
         //编写ajax
-        var obj={
-            url:"imageupload.do",
-            dataType:"json",
-            type:"post",
-            success:function(data){
-                $("#img").attr("src",data.imagePath);
-                $("#pic").attr("value",data.imagePath);
+        var obj = {
+            url: "imageupload.do",
+            dataType: "json",
+            type: "post",
+            success: function (data) {
+                $("#img").attr("src", data.imagePath);
+                $("#pic").attr("value", data.imagePath);
             }
         };
         //提交form

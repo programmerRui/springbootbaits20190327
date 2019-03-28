@@ -54,12 +54,12 @@
 
     <!-- 当发生服务器错误时，自动跳转至错误页面并跳转至登录页面 -->
     <!--<error-page>-->
-        <!--<error-code>500</error-code>-->
-        <!--<location>/jsp/serviceerror.jsp</location>-->
+    <!--<error-code>500</error-code>-->
+    <!--<location>/jsp/serviceerror.jsp</location>-->
     <!--</error-page>-->
     <!--<error-page>-->
-        <!--<error-code>404</error-code>-->
-        <!--<location>/jsp/error.jsp</location>-->
+    <!--<error-code>404</error-code>-->
+    <!--<location>/jsp/error.jsp</location>-->
     <!--</error-page>-->
     <!-- end -->
 </web-app>

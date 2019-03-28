@@ -2,6 +2,7 @@ package com.nuesoft.dao;
 
 import com.nuesoft.po.BookType;
 import com.nuesoft.po.BookTypeExample;
+
 import java.util.List;
 
 public interface BookTypeMapper {

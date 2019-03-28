@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" isELIgnored="false"
-         pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+         pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -17,7 +17,7 @@
 <body>
 <div id="body">
     <div style="margin: 0px auto; width: 500px;">
-        <form action="/add.do" id="imm" method="post" enctype="multipart/form-data" >
+        <form action="/add.do" id="imm" method="post" enctype="multipart/form-data">
             <table border="1px" style="text-align: center;">
                 <tr>
                     <td>图书编号</td>
@@ -71,15 +71,15 @@
 <script type="text/javascript" src="../../resource/js/jquery_2.1.4_baidu_min.js"></script>
 <script type="text/javascript" src="../../resource/js/jquery-form.js"></script>
 <script type="text/javascript">
-    function uploadImage(){
+    function uploadImage() {
         //编写ajax
-        var obj={
-            url:"imageupload.do",
-            dataType:"json",
-            type:"post",
-            success:function(data){
-                $("#img").attr("src",data.imagePath);
-                $("#pic").attr("value",data.imagePath);
+        var obj = {
+            url: "imageupload.do",
+            dataType: "json",
+            type: "post",
+            success: function (data) {
+                $("#img").attr("src", data.imagePath);
+                $("#pic").attr("value", data.imagePath);
             }
         };
         //提交form

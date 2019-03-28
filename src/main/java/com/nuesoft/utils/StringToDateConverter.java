@@ -17,13 +17,13 @@ public class StringToDateConverter implements Converter<String, Date> {
         }
         source = source.trim();
         System.out.println(source);
-        Date date=null;
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
+        Date date = null;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
 
         simpleDateFormat.setLenient(false);// 宽松解析true，严格解析false
-        if (source!=null) {
+        if (source != null) {
             try {
-                date= simpleDateFormat.parse(source);
+                date = simpleDateFormat.parse(source);
             } catch (ParseException e) {
                 e.printStackTrace();
             }
