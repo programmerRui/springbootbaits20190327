@@ -3,7 +3,6 @@ package com.nuesoft.service;
 import com.nuesoft.po.BookInfo;
 import com.nuesoft.po.BookInfoExample;
 import org.apache.ibatis.annotations.Param;
-
 import java.util.List;
 
 public interface bookInfoService {
