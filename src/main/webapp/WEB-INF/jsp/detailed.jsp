@@ -57,8 +57,11 @@
                 <tr>
                     <td>图片上传</td>
                     <td>
-                        <img id="img" src="${bookInfo.bookPath}" width="120px" height="150px">
-                        <a href="download.do?bookPash=${bookInfo.bookPath}">下载</a>
+                        <c:if test="${bookInfo.bookPath!=null}">
+                            <img id="img" src="${bookInfo.bookPath}" width="120px" height="150px">
+                            <a href="download.do?imagepath=${bookInfo.bookPath}">下载</a>
+                        </c:if>
+                        <c:if test="${bookInfo.bookPath==null}">未添加图片</c:if>
                     </td>
                 </tr>
                 <tr>
